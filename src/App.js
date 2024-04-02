@@ -1,18 +1,20 @@
+import { Route, Routes } from 'react-router-dom';
 import React from 'react'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import HeadlineCards from './components/HeadlineCards'
-import Food from './components/Food'
-import Category from './components/Category'
+import Home from './pages/Home';
+import Signin from './pages/Signin';
+import Signup from './pages/Signup';
 
 function App() {
   return (
     <div>
         <Navbar />
-        <Hero />
-        <HeadlineCards />
-        <Food />
-        <Category />
+        <Routes>  
+        <Route path='/' element={<Home />} />
+        <Route path='/signin' element={<Signin />} />
+        <Route path='/signup' element={<Signup />} />
+        </Routes>
+
     </div>
   );
 }
