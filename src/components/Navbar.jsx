@@ -11,10 +11,20 @@ import { FaUserFriends, FaWallet } from "react-icons/fa";
 import { MdFavorite, MdHelp } from "react-icons/md";
 import { CiLogin, CiLogout  } from "react-icons/ci";
 import { Link } from 'react-router-dom';
+import { UserAuth } from '../context/AuthContext';
 
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const { user, logOut } = UserAuth();
+
+  const handleSignOut = async () => {
+    try {
+      await logOut()
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   return (
     <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4">
@@ -48,11 +58,14 @@ const Navbar = () => {
           <BsFillCartFill size={20} className="mr-2" /> Carrinho
         </button>
         </div>
+        {user?.displayName ? (
+        <button onClick={handleSignOut}>Sair</button>
+      ) : (
         <Link to='/signin'>
         <button className="bg-orange-500 text-white hidden md:flex items-center py-2 rounded-full">
           <CiLogin size={20} className="mr-2" /> Login
         </button>
-        </Link>
+        </Link>)} 
       </div>
 
       {nav ? (
