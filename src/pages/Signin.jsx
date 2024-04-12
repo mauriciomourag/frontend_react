@@ -57,7 +57,7 @@ const Signin = () => {
           <label className='py-2 font-medium'>Senha</label>
           <input onChange={(e) => setPassword(e.target.value)} className='border p-3' type='password' />
         </div>
-        <button className='border border-orange-500 bg-orange-600 hover:bg-orange-500 w-full p-4 my-2 text-white'>
+        <button className='border border-primaryhover bg-primary hover:bg-primaryhover w-full p-4 my-2 text-white'>
           Entrar
         </button>
       </form>

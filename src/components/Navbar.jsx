@@ -33,8 +33,8 @@ const Navbar = () => {
           <AiOutlineMenu size={30} />
         </div>
         <Link to='/'>
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2">
-          App de <span className="font-bold">Refeição</span>
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2 text-primaryhover">
+          App de <span className="font-bold text-primary">Refeição</span>
         </h1>
         </Link>
         <div className="hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px]">
@@ -62,7 +62,7 @@ const Navbar = () => {
         <button onClick={handleSignOut}>Sair</button>
       ) : (
         <Link to='/signin'>
-        <button className="bg-orange-500 text-white hidden md:flex items-center py-2 rounded-full">
+        <button className="bg-primary text-white hidden md:flex items-center py-2 rounded-full">
           <CiLogin size={20} className="mr-2" /> Login
         </button>
         </Link>)} 
@@ -87,7 +87,7 @@ const Navbar = () => {
           size={30}
           className="absolute right-4 top-4 cursor-pointer"
         />
-        <h2 className="text-2xl p-4">
+        <h2 className="text-2xl p-4 text-primaryhover">
           App de <span className="font-bold">Refeição</span>
         </h2>
         <nav>

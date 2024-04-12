@@ -49,7 +49,7 @@ const Signup = () => {
             type='password'
           />
         </div>
-        <button className='border border-purple-500 bg-purple-600 hover:bg-purple-500 w-full p-4 my-2 text-white'>
+        <button className='border border-primaryhover bg-primary hover:bg-primaryhover w-full p-4 my-2 text-white'>
           Cadastrar
         </button>
       </form>
