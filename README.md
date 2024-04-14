@@ -2,7 +2,7 @@
 
 O objetivo deste projeto é aplicar os ensinamentos aprendidos em aula da Pós Graduação.
 
-Algumas funcionalidades comuns de um app delivery, não estão inclusivos.
+Algumas funcionalidades comuns de um app delivery, não estão inclusas.
 
 Outras funcionalidades que não "fazem sentido" em um app de delivery, estão inclusas.
 
