@@ -14,7 +14,7 @@ const Food = () => {
     );
   };
 
-  //Filtrar o preço
+  //Filtrar por preço
   const filterPrice = (price) => {
     setFoods(
       data.filter((item) => {
@@ -28,8 +28,7 @@ const Food = () => {
       <h1 className='text-primary font-bold text-4xl text-center'>
        As Comidas Mais Bem Avaliadas
       </h1>
-
-      {/* Filtrar linha*/}
+      
       <div className='flex flex-col lg:flex-row justify-between'>
         {/* Flitrar tipo */}
         <div>

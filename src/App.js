@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <AuthContextProvider>
-        <Navbar />
+        <Navbar size={5} />
         <Routes>  
         <Route path='/' element={<Home />} />
         <Route path='/signin' element={<Signin />} />

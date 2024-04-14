@@ -8,14 +8,16 @@ import {
 import { BsFillCartFill, BsFillSaveFill } from "react-icons/bs";
 import { TbTruckDelivery } from "react-icons/tb";
 import { FaUserFriends, FaWallet } from "react-icons/fa";
-import { MdFavorite, MdHelp } from "react-icons/md";
+import { MdFavorite, MdHelp, MdLocationOn } from "react-icons/md";
 import { CiLogin, CiLogout  } from "react-icons/ci";
 import { Link } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
+import Location from "./Location";
 
 
-const Navbar = () => {
+const Navbar = ({size, setShow}) => {
   const [nav, setNav] = useState(false);
+  const [loc, setLoc] = useState(false);   
   const { user, logOut } = UserAuth();
 
   const handleSignOut = async () => {
@@ -41,6 +43,13 @@ const Navbar = () => {
           <p className="bg-black text-white rounded-full p-2">Delivery</p>
           <p className="p-2">Buscar</p>
         </div>
+
+        <div className="hidden lg:flex items-center bg-gray-200 rounded-full  text-[14px] m-1">        
+          <button onClick={() => setLoc(!loc)} className="hidden lg:flex items-center bg-gray-200 rounded-full p-2 text-[15px] border-none">
+          <MdLocationOn size={25} className="text-primary" /> Localidade
+          </button>
+        </div>
+
       </div>
 
       <div className="bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]">
@@ -55,9 +64,13 @@ const Navbar = () => {
       <div className="flex justify-between items-center">
       <div className="p-1 ">
         <button className="bg-black text-white hidden md:flex items-center py-2 rounded-full">
-          <BsFillCartFill size={20} className="mr-2" /> Carrinho
-        </button>
+          <BsFillCartFill size={20} className="mr-2" />
+          <span>{size}</span>
+        </button>    
         </div>
+
+        
+        
         {user?.displayName ? (
         <button onClick={handleSignOut}>Sair</button>
       ) : (
@@ -74,6 +87,27 @@ const Navbar = () => {
         ""
       )}
 
+
+            {/* Menu Localidade */}
+            <div
+        className={
+          loc
+            ? "fixed rounded-lg top-20 left-100 w-[500px] h-100px bg-rose-200 z-10 duration-300"
+            : "fixed rounded-lg top-20 left-[-100%] w-[500px] h-100px bg-rose-200 z-10 duration-300"
+        }
+        
+      >
+        <AiOutlineClose
+          onClick={() => setLoc(!loc)}
+          size={30}
+          className="absolute right-4 top-4 cursor-pointer"
+        />
+        <h2 className="text-2xl p-4 text-primaryhover">
+          <span className="font-bold">Endereço</span>
+        </h2>
+        <Location />
+      </div>
+
       {/* Menu Lateral */}
       <div
         className={
@@ -81,6 +115,7 @@ const Navbar = () => {
             ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300"
             : "fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-300"
         }
+        
       >
         <AiOutlineClose
           onClick={() => setNav(!nav)}
