@@ -36,7 +36,7 @@ const Navbar = ({size, setShow}) => {
         </div>
         <Link to='/'>
         <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2 text-primaryhover">
-          App de <span className="font-bold text-primary">Refeição</span>
+          App de <span className="font-bold text-primary">Restaurante</span>
         </h1>
         </Link>
         <div className="hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px]">
@@ -92,8 +92,8 @@ const Navbar = ({size, setShow}) => {
             <div
         className={
           loc
-            ? "fixed rounded-lg top-20 left-100 w-[500px] h-100px bg-rose-200 z-10 duration-300"
-            : "fixed rounded-lg top-20 left-[-100%] w-[500px] h-100px bg-rose-200 z-10 duration-300"
+            ? "fixed rounded-lg top-20 left-100 w-[500px] h-100px bg-rose-50 z-10 duration-300"
+            : "fixed rounded-lg top-20 left-[-100%] w-[500px] h-100px bg-rose-50 z-10 duration-300 "
         }
         
       >
@@ -102,7 +102,7 @@ const Navbar = ({size, setShow}) => {
           size={30}
           className="absolute right-4 top-4 cursor-pointer"
         />
-        <h2 className="text-2xl p-4 text-primaryhover">
+        <h2 className="text-2xl p-4 text-primaryhover ">
           <span className="font-bold">Endereço</span>
         </h2>
         <Location />

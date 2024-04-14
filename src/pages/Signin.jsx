@@ -61,8 +61,8 @@ const Signin = () => {
           Entrar
         </button>
       </form>
-      <div className='max-w-[240px] m-auto py-4 '>
-        <GoogleButton onClick={handleGoogleSignIn} />
+      <div className='max-w-[240px] m-auto py-4'>
+        <GoogleButton type="light" label='Entrar com Google' onClick={handleGoogleSignIn} />
       </div>
     </div>
   );
