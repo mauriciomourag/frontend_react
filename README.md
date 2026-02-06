@@ -1,4 +1,4 @@
-🍔 Aplicativo de Delivery – Frontend em React
+🍔 Aplicativo de Delivery – Restaurant Delivery App (React)
 
 🎓 Sobre o Projeto
 
