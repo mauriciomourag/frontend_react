@@ -1,4 +1,5 @@
 🍔 Aplicativo de Delivery – Frontend em React
+
 🎓 Sobre o Projeto
 
 Este repositório contém um aplicativo de delivery de um restaurante, desenvolvido como parte das atividades da Pós-Graduação, com o objetivo de aplicar na prática os conceitos aprendidos em aula relacionados ao desenvolvimento de interfaces e aplicações front-end.
